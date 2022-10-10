@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
+  },
+  "scripts": {
+    "hello": "node src/hello.js",
+    "lancePython": "python lala.py",
+    "test": "jest"
+  }
+}
