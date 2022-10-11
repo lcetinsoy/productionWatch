@@ -1,11 +1,12 @@
 const fs = require('fs') //available in node without installation
 
-function processFileContent(err, fileContent){
+const processFileContent = (err, fileContent) => {
     if (err){
-        console.error(err)
+        console.log(err)
         return
     }
-    console.log(typeof fileContent, fileContent)
+    //content of the function
+    console.log(fileContent)
 }
 
 // string, function ->   readFile -> Nothing

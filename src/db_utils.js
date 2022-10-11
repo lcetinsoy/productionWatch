@@ -25,6 +25,17 @@ function getUsers(connection, userId, functionToCallWhenDone){
     )
 }
 
+function getUserCount(callback){
+
+    connection.query(
+        //"SELECT * FROM user WHERE id=" + userId, 
+        //`SELECT * FROM user WHERE id=${userId}`
+    //NVER DO LIKE THAT : SECURITY RISK : 
+    //SQL INJECTION
+    "SELECT count(*) as nUser FROM user", callback)
+}
+
+
 function insertUser(connection, 
                     userData, 
                     functionToCallWhenDone
@@ -35,13 +46,6 @@ function insertUser(connection,
        [userData.email, userData.ville], //as many values as ? in the query
         functionToCallWhenDone
     )
-}
-
-function updateUser(
-    connection, 
-    userToUpdateId, 
-    dataToUpdate, 
-    callback){
 }
 
 
